@@ -1,0 +1,13 @@
+'''Sample for finding names passed as parameter using SLIM Query Table.'''
+
+| query: students with name test | john% |
+| name |
+| John Forbes Nash |
+| John Keynes |
+
+'''Sample for finding names passed as parameter using SLIM Subset Query Table.'''
+
+|subset query: students with name test | %r% |
+| name |
+| Radhanath Sikdar |
+| Bernhard Riemann |

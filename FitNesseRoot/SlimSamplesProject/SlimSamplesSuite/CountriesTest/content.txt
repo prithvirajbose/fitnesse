@@ -1,0 +1,22 @@
+'''Sample for using SLIM Script Table.'''
+
+| script | countries test |
+| load countries from file | C:/Java/fitnesse/inputs/countries.csv |
+| ensure| country list size | 244 |
+| reject| country list size | 300 |
+| search | f |
+| ensure| contains | France |
+| reject| contains | India |
+| get capital | Norway | 
+| check | capital | Oslo |
+| check not | capital | Helsinki |
+| search | tu |
+| ensure | search list size | 8 |
+| ensure | contains | Tunisia |
+| ensure | contains | Portugal |
+| search | zi |
+| ensure | search list size | 4 |
+| ensure | contains | Brazil |
+| ensure | contains | Swaziland |
+
+

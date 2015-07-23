@@ -1,0 +1,4 @@
+!*> SetUp
+|import|
+|slim.fixtures|
+*!

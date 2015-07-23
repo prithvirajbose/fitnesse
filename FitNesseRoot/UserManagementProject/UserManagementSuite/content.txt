@@ -1,0 +1,7 @@
+!contents -R2 -g -p -f -h
+
+'''User Management Suite by Prithviraj Bose.'''
+'''Uses SLIM Scenario Library, Scenario and Script tables.'''
+
+!define TEST_SYSTEM {slim}
+!path C:\Java\fitnesse\bin

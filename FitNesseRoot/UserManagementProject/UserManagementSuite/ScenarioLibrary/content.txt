@@ -1,0 +1,28 @@
+'''Scenario where guest user has read-only access'''
+
+| scenario | create guest user can read | read | can write | write | can delete | delete |
+| create user | guest | can read | @read | can write | @write | can delete | @delete |
+| check | read from repository | true |
+| check | write to repository | false |
+| check | error message | User: [guest] Write restricted. |
+| check | delete from repository | false |
+| check | error message | User: [guest] Deletion restricted. |
+
+'''Scenario where another user has no access'''
+
+| scenario | create another user can read can write can delete | read,write,delete |
+| create user | another | can read | @read | can write | @write | can delete | @delete |
+| check | read from repository | false |
+| check | error message | User: [another] Read restricted. |
+| check | write to repository | false |
+| check | error message | User: [another] Write restricted. |
+| check | delete from repository | false |
+| check | error message | User: [another] Deletion restricted. |
+
+'''Scenario where admin user has all access'''
+
+| scenario | create admin user can read | read | can write | write | can delete | delete |
+| create user | admin | can read | @read | can write | @write | can delete | @delete |
+| check | read from repository | true |
+| check | write to repository | true |
+| check | delete from repository | true |

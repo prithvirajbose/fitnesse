@@ -1,0 +1,13 @@
+'''Sample for using SLIM Script Table.'''
+'''Here's an example where the actor takes constructor arguments'''
+
+| script | insert number test | 11, 13, 17, 20, 23, 29, 31, 37 |
+|insert | 20 | at index | 2 |
+| get number at index | 2 |
+| check | number | 20 |
+| get number at index | 0 |
+| show | number |
+| insert at index; | 9 | 0 |
+| get number at index | 0 |
+| show | number |
+| check not | number | 11 |

@@ -1,0 +1,6 @@
+'''Verification of access rights on repositories by user types.'''
+
+| script | repository access test |
+| create guest user can read | true | can write | false | can delete | false |
+| create admin user can read | true | can write | true | can delete | true |
+| create another user can read | false | can write | false | can delete | false |
